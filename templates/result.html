@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Blend Result</title>
+</head>
+<body>
+    <h1>Image Blend Result</h1>
+    <div>
+        <img src="{{ blended_img_path }}" alt="Blended Image">
+    </div>
+    <div>
+        <h2>Color Distribution - Image </h2>
+        <img src="{{ url_for('static', filename='color_distributions.png') }}" alt="Color Distribution - Image 1">
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Blend</title>
+</head>
+<body>
+    <h1>Image Blend</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <div>
+            <label for="file1">Image 1</label>
+            <input type="file" id="file1" name="file1" required>
+        </div>
+        <div>
+            <label for="file2">Image 2</label>
+            <input type="file" id="file2" name="file2" required>
+        </div>
+        <div>
+            <label for="alpha">Alpha (0-1)</label>
+            <input type="number" id="alpha" name="alpha" min="0" max="1" step="0.01" required>
+        </div>
+        <div>
+            {{ form.recaptcha }}
+        </div>
+        <div>
+            <button type="submit">Blend</button>
+        </div>
+    </form>
+</body>
+</html>
